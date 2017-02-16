@@ -49,10 +49,11 @@ app.controller('editCtrl', function ($scope, $rootScope, $location, $routeParams
         return angular.equals(original, $scope.Item);
       }
 
-      $scope.deleteItem = function(Item) {
+      $scope.deleteItem = function() {
         $location.path('/');
         if(confirm("Are you sure to delete Item number: "+$scope.Item._id)==true)
-        services.deleteItem(Item.ItemNumber);
+        console.log($scope.Item._id);
+        services.deleteItem($scope.Item._id);
       };
 
       $scope.saveItem = function(Item) {

@@ -71,7 +71,7 @@
 
 			$item = json_decode(file_get_contents("php://input"),true);
 			$column_names = array('name', 'type', 'price');
-			$keys = array_keys($customer);
+			$keys = array_keys($item);
 			$columns = '';
 			$values = '';
 			foreach($column_names as $desired_key){ // Check the item received. If blank insert blank into the array.
@@ -83,7 +83,7 @@
 				$columns = $columns.$desired_key.',';
 				$values = $values."'".$$desired_key."',";
 			}
-			$query = "INSERT INTO test(".trim($columns,',').") VALUES(".trim($values,',').")";
+			$query = "INSERT INTO item(".trim($columns,',').") VALUES(".trim($values,',').")";
 			if(!empty($item)){
 				$r = $this->mysqli->query($query) or die($this->mysqli->error.__LINE__);
 				$success = array('status' => "Success", "msg" => "Item Created Successfully.", "data" => $item);
@@ -98,18 +98,18 @@
 			$item = json_decode(file_get_contents("php://input"),true);
 			$id = (int)$item['id'];
 			$column_names = array('name', 'type', 'price');
-			$keys = array_keys($item['item']);
+			$keys = array_keys($item['Item']);
 			$columns = '';
 			$values = '';
 			foreach($column_names as $desired_key){ // Check the item received. If key does not exist, insert blank into the array.
 			   if(!in_array($desired_key, $keys)) {
 			   		$$desired_key = '';
 				}else{
-					$$desired_key = $item['item'][$desired_key];
+					$$desired_key = $item['Item'][$desired_key];
 				}
 				$columns = $columns.$desired_key."='".$$desired_key."',";
 			}
-			$query = "UPDATE test SET ".trim($columns,',')." WHERE iditem=$id";
+			$query = "UPDATE item SET ".trim($columns,',')." WHERE iditem=$id";
 			if(!empty($item)){
 				$r = $this->mysqli->query($query) or die($this->mysqli->error.__LINE__);
 				$success = array('status' => "Success", "msg" => "Item ".$id." Updated Successfully.", "data" => $item);
@@ -124,7 +124,7 @@
 			}
 			$id = (int)$this->_request['id'];
 			if($id > 0){
-				$query="DELETE FROM test WHERE iditem = $id";
+				$query="DELETE FROM item WHERE iditem = $id";
 				$r = $this->mysqli->query($query) or die($this->mysqli->error.__LINE__);
 				$success = array('status' => "Success", "msg" => "Successfully deleted one record.");
 				$this->response($this->json($success),200);
