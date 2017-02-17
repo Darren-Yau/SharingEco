@@ -55,8 +55,6 @@ CREATE TABLE `house` (
   `Sqft` int(11) NOT NULL,
   `Rooms` int(11) NOT NULL,
   `Baths` int(11) NOT NULL,
-  `Cats` tinyint(1) NOT NULL,
-  `Dogs` tinyint(1) NOT NULL,
   `ID` int(11) NOT NULL,
   KEY `ID` (`ID`),
   CONSTRAINT `house_ibfk_1` FOREIGN KEY (`ID`) REFERENCES `post` (`ID`)
@@ -110,10 +108,14 @@ DROP TABLE IF EXISTS `post`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `post` (
   `ID` int(11) NOT NULL,
+  `DateCreated` date NOT NULL,
   `CreatorID` int(11) NOT NULL,
   `Title` varchar(256) NOT NULL,
   `ItemType` varchar(32) NOT NULL,
-  `DateCreated` mediumtext NOT NULL,
+  `Description` varchar(4096) DEFAULT NULL,
+  `AvailStart` date NOT NULL,
+  `AvailEnd` date NOT NULL,
+  `Address` varchar(128) DEFAULT NULL,
   PRIMARY KEY (`ID`),
   KEY `CreatorID` (`CreatorID`),
   CONSTRAINT `post_ibfk_1` FOREIGN KEY (`CreatorID`) REFERENCES `user` (`ID`)
@@ -126,7 +128,6 @@ CREATE TABLE `post` (
 
 LOCK TABLES `post` WRITE;
 /*!40000 ALTER TABLE `post` DISABLE KEYS */;
-INSERT INTO `post` VALUES (1,1,'4BD House','House','1486770500');
 /*!40000 ALTER TABLE `post` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -143,8 +144,9 @@ CREATE TABLE `user` (
   `PassSalt` varchar(8) NOT NULL,
   `Fname` varchar(32) NOT NULL,
   `Lname` varchar(32) NOT NULL,
-  `Email` varchar(128) DEFAULT NULL,
-  PRIMARY KEY (`ID`)
+  `Email` varchar(128) NOT NULL,
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `Email_UNIQUE` (`Email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -167,4 +169,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-02-16 22:00:52
+-- Dump completed on 2017-02-16 22:16:44
