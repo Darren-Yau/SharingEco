@@ -1,0 +1,127 @@
+/*Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+--*/
+
+#wrapper {
+    margin: auto;
+}
+
+#header {
+    height: 130px;
+}
+
+#content {
+    padding: 30px;
+        background-color: #7f7b76;
+}
+
+#content-L {
+    width: 200px;
+    height: 1000px;
+    float: left;
+    border: 2px;
+     background-color: #c1baba;
+}
+
+#content-R {
+    width: 1100px;
+    height: 1000px;
+    margin-left: 220px;
+ }
+
+#content-S {
+    width: 1100px;
+    height: 100px;
+    float: left;
+}
+
+#footer {}
+
+#postlist li {
+    list-style-type: none;
+}
+
+
+/*-----------------------This is element area------------------------*/
+
+.main-btn {
+    position: relative;
+    padding: 6px 15px;
+    left: -8px;
+    border: 2px solid #207cca;
+    background-color: #207cca;
+    color: #fafafa;
+}
+
+.main-btn:hover {
+    background-color: #fafafa;
+    color: #207cca;
+}
+
+
+/*-----------------------This is for homepage's filter------------------------*/
+
+
+/*-----------------------This is for homepage's filter------------------------*/
+
+.select-grid {
+    width: 150px;
+}
+
+.sel {
+    width: 100px;
+}
+
+
+/*-------------------------------------------------------------------------*/
+
+
+/*----------------------This is for homepage's post field----------------------*/
+
+.hpost {
+    width: 250px;
+    height: 250px;
+    margin: 20px;
+    padding: 10px;
+    border: 2px;
+    border-style: solid;
+    float: left;
+}
+
+.hpostimg {
+    margin: 5px;
+}
+
+.hpostname {}
+
+
+/*-------------------------------------------------------------------------*/
+
+
+/*-------------------------This is for homepage's search box--------------------------*/
+
+.search-text {
+    padding: 8px 15px;
+    background: rgba(0, 0, 0, 0.75);
+    border: 0px solid #dbdbdb;
+    color: white;
+}
+
+.search-btn {
+    position: relative;
+    padding: 6px 15px;
+    left: -8px;
+    border: 2px solid #207cca;
+    background-color: #207cca;
+    color: #fafafa;
+}
+
+.search-btn:hover {
+    background-color: #fafafa;
+    color: #207cca;
+}
+
+
+/*-------------------------------------------------------------------------*/
