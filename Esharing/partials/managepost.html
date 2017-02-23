@@ -1,43 +1,43 @@
-<div style="background-image: url('/images/home.jpg');">
+<div>
     <div class="panel panel-primary center-absolute">
-        <div class="panel-heading">Login</div>
+        <div class="panel-heading">Manage Post</div>
         <div class="panel-body">
-            <table>
+            <table class="">
+
                 <tbody>
                 <tr>
                     <td><span class="height-30">&nbsp;</span></td>
                     <td><span class="height-30">&nbsp;</span></td>
                 </tr>
-                <tr>
-                    <td class="table-item-label-style">
-                        Email Id
-                    </td>
+
+                <tr ng-repeat="item in ['house1', 'house2', 'car1', 'car2', 'car3']">
                     <td class="table-item-data-style">
-                        <input class="long-width" type="text" name="emailAddress" placeholder="Email">
+                        <a href=" ">{{item}}</a>
                     </td>
-                </tr>
-                <tr>
-                    <td class="table-item-label-style">
-                        Password
-                    </td>
-                    <td class="table-item-data-style">
-                        <input class="long-width" type="password" name="password" placeholder="*******">
-                    </td>
-                </tr>
-                <tr>
-                    <td class="table-item-data-style">
-                    </td>
-                    <td class="table-item-data-style">
+                    <td class="table-item-data-style" style="text-align: center;">
                         <button class="btn btn-primary" type="button">Edit</button>
+                    </td>
+                    <td class="table-item-data-style">
                         <button class="btn btn-primary" type="button">Delete</button>
                     </td>
                 </tr>
+
                 <tr>
-                    <td><span class="height-30">&nbsp;</span></td>
-                    <td><span class="height-30">&nbsp;</span></td>
+                    <td class="table-item-data-style">
+                    </td>
+                    <td class="table-item-data-style">
+                        <button class="btn btn-primary" type="button">Add Car Post</button>
+                    </td>
+                    <td class="table-item-data-style">
+                        <button class="btn btn-primary" type="button">Add House Post</button>
+                    </td>
                 </tr>
+
                 </tbody>
+
             </table>
+
         </div>
     </div>
+
 </div>
