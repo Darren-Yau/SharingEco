@@ -67,8 +67,7 @@ app.controller('editCtrl', function ($scope, $rootScope, $location, $routeParams
     };
 });
 
-app.config(['$routeProvider',
-  function($routeProvider) {
+app.config(['$routeProvider', function($routeProvider) {
     $routeProvider.
       when('/', {
         title: 'Items',
@@ -86,6 +85,21 @@ app.config(['$routeProvider',
           }
         }
       })
+      .when('/login', {
+          title: 'Login',
+          templateUrl: 'partials/login.html'
+          // TODO - ADD controller
+      })
+    .when('/signup', {
+        title: 'SignUp',
+        templateUrl: 'partials/signup.html'
+        // TODO - ADD controller
+    })
+    .when('/managepost', {
+        title: 'SignUp',
+        templateUrl: 'partials/managepost.html'
+        // TODO - ADD controller
+    })
       .otherwise({
         redirectTo: '/'
       });
