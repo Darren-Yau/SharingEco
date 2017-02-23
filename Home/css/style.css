@@ -4,6 +4,9 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
 
+
+/*-----------------------Mainpage id-----------------------*/
+
 #wrapper {
     margin: auto;
 }
@@ -25,6 +28,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
      background-color: #c1baba;
 }
 
+
+ 
+
+
+ 
+
 #content-R {
     width: 1100px;
     height: 1000px;
@@ -43,6 +52,30 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     list-style-type: none;
 }
 
+
+
+
+
+/*-----------------------Viewpage id-----------------------*/
+
+
+#view-content-L {
+    width: 600px;
+    height: 1000px;
+    float: left;
+    border: 2px;
+    background-color: #c1baba;
+}
+
+
+#view-content-R {
+    width: 500px;
+    height: 1000px;
+    margin-left: 600px;
+    background-color: #c1baba;
+ }
+
+ 
 
 /*-----------------------This is element area------------------------*/
 
@@ -74,6 +107,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     width: 100px;
 }
 
+
+.filter-btn{
+    position: relative;
+    padding: 6px 15px; 
+    border: 2px solid #207cca;
+    background-color: #207cca;
+    color: #fafafa;
+}
+
+
+.filter-btn:hover {
+  background-color: #fafafa;
+    color: #207cca;
+}
 
 /*-------------------------------------------------------------------------*/
 
@@ -124,4 +171,51 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 }
 
 
-/*-------------------------------------------------------------------------*/
+
+
+/*--------------------This is for viewpage's info--------------------------*/
+.viewpostimg {
+    width: 480px;
+    height: 480px;
+    margin: 20px;
+    padding: 10px;
+    border: 2px;
+    border-style: solid;
+    float: left;
+}
+
+
+.viewpostinfo{
+    width: 480px;
+    height: 400px;
+    margin: 20px;
+    padding: 10px;
+    border: 2px; 
+    float: left;
+}
+
+.viewpostcontact{
+    width: 480px;
+    height: 400px;
+    margin: 500px 20px 20px 20px;
+
+    padding: 10px;
+    border: 2px; 
+    float: left;
+}
+
+.txtinfo{
+    border: 1px;
+    border-style: solid;
+}
+
+
+.txtnote{
+    width: 400px;
+    height: 200px;
+    border: 1px;
+    border-style: solid;
+}
+
+ 
+ 
