@@ -282,19 +282,8 @@
 				$success = array('status' => "Success", "msg" => "Successfully deleted one record.");
 				$this->response($this->json($success),200)
 		}
-				private function deleteItem(){
-			if($this->get_request_method() != "DELETE"){
-				$this->response('',406);
-			}
-			$id = (int)$this->_request['id'];
-			if($id > 0){
-				$query="DELETE FROM item WHERE iditem = $id";
-				$r = $this->mysqli->query($query) or die($this->mysqli->error.__LINE__);
-				$success = array('status' => "Success", "msg" => "Successfully deleted one record.");
-				$this->response($this->json($success),200);
-			}else
-				$this->response('',204);	// If no records "No Content" status
-		}
+
+		/*
 		--getRecMail
 		--getSentMail
 		--generateHash
@@ -313,7 +302,7 @@
 		--createUser
 		--userLoginVerifiation
 		--checkUniqueEmail
-		
+		*/
 		
 		private function deleteItem(){
 			if($this->get_request_method() != "DELETE"){
