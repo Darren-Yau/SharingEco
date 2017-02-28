@@ -227,5 +227,34 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     border-style: solid;
     float: left;
 }
+
+
+/*--------------------This is for mail's info--------------------------*/
+
+.messageGrid {
+    width: 750px;
+    height: 120px;
+    margin: 20px;
+    padding: 10px;
+    border: 2px;
+    border-style: solid;
+    float: left; 
+}
  
  
+ .accountGrid {
+    width: 250px;
+    height: 25px;
+    margin-bottom: 10px; 
+    border: 2px;
+    border-style: solid;
+    float: left; 
+}
+
+ .textGrid {
+    width: 600px;
+    height: 80px; 
+    margin-top: 5px; 
+ 
+    float: left; 
+}
