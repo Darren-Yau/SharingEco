@@ -217,5 +217,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     border-style: solid;
 }
 
+/*--------------------This is for add's info--------------------------*/
+.addpostimg {
+    width: 350px;
+    height: 350px;
+    margin: 20px;
+    padding: 10px;
+    border: 2px;
+    border-style: solid;
+    float: left;
+}
  
  
