@@ -52,7 +52,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     list-style-type: none;
 }
 
-
+.test{
+    width: 480px;
+    height: 480px;
+    margin: 20px;
+    padding: 10px;
+    border: 2px;
+    border-style: solid;
+    float: left;
+}
 
 
 
@@ -258,3 +266,5 @@ License URL: http://creativecommons.org/licenses/by/3.0/
  
     float: left; 
 }
+
+
