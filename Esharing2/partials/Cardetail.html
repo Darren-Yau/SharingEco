@@ -1,0 +1,72 @@
+<div class="container">
+    <div class="center">
+        <div class="col-md-6 col-md-offset-3">
+            <h2>Title</h2>
+            <hr>
+            <h5><span class="glyphicon glyphicon-time"></span> Post by {{Car.Fname}} {{Car.Lname}}, Sep 24, 2015.</h5>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <img src="{{Car.imgsrc}}" alt="">
+        </div>
+        <div class="col-md-3">
+            <h4>Send a Mail:</h4>
+            <input type="text" class="form-control" placeholder="subject">
+            <br>
+            <textarea class="form-control" rows="12" required></textarea>
+            <br>
+            <button type="submit" class="btn btn-lg btn-success btn-block">Submit</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <table class="table table-striped table-inverse">
+                <tbody>
+                    <tr>
+                        <th scope="row">Available Date:</th>
+                        <td>{{Car.AvailStart}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">End Date:</th>
+                        <td>{{Car.AvailEnd}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Address:</th>
+                        <td>{{Car.Address}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Price:</th>
+                        <td>${{Car.Price}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-6">
+            <table class="table table-striped table-inverse">
+                <tbody>
+                    <tr>
+                        <th scope="row">Make:</th>
+                        <td>{{Car.Make}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Model:</th>
+                        <td>{{Car.Model}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Year:</th>
+                        <td>{{Car.Yr}}</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Color:</th>
+                        <td>{{Car.Color}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

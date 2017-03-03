@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <title>item</title>
+</head>
+
+<body>
+    <div class="jumbotron">
+        <div class="container text-center">
+            <h1>Online Store</h1>
+            <p>Mission, Vission & Values</p>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                <a class="navbar-brand" href="#">Logo</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Deals</a></li>
+                    <li><a href="#">Stores</a></li>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Items <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#cars">Car</a></li>
+                            <li><a href="#houses">House</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#login"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
+                    <li><a href="#postManage"><span class="glyphicon glyphicon-shopping-cart"></span> Post Management</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div ng-view="" id="ng-view"></div>
+    </div>
+
+    <footer class="container-fluid text-center">
+        <a class="up-arrow" href="#home" data-toggle="tooltip" title="TO TOP">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a>
+        <p>welcome to kaichen's website!</a>
+        </p>
+    </footer>
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="app/app.js"></script>
+</body>
+
+</html>
