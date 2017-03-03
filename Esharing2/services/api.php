@@ -146,6 +146,36 @@
       }else
       $this->response('',204);
     }
+
+    private function getsendMails(){
+		$id = (int)$this->_request['id']; //ID needs to equal current user ID
+		$mymail=array();
+		if($id > 0){
+			$query="SELECT * FROM mail where SendID=$id";
+			$r = $this->mysqli->query($query) or die($this->mysqli->error.__LINE__);
+			if($r->num_rows > 0) {
+				$index = 0;
+				while($row = $r->fetch_assoc()){
+					$mymail[$index++]=$row;
+				}
+				$this->response($this->json($mymail), 200); // return sent mail details
+			}
+		}
+		$this->response('',204);	// If no records "No Content" status
+	}
+	
+	private function getRecMails(){
+		$id = (int)$this->_request['id']; //ID needs to equal current user ID
+		if($id > 0){
+			$query="SELECT SendID, Message FROM Mail where RecID=$id";
+			$r = $this->mysqli->query($query) or die($this->mysqli->error.__LINE__);
+			if($r->num_rows > 0) {
+				//$result = $r->fetch_assoc();
+				$this->response($this->json($r), 200); // return recieved mail details
+			}
+		}
+		$this->response('',204);	// If no records "No Content" status
+	}
 		/*
 		 *	Encode array into JSON
 		*/
