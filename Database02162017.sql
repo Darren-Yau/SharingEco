@@ -108,13 +108,13 @@ DROP TABLE IF EXISTS `post`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `post` (
   `ID` int(11) NOT NULL,
-  `DateCreated` date NOT NULL,
+  `DateCreated` varchar(32) NOT NULL,
   `CreatorID` int(11) NOT NULL,
   `Title` varchar(256) NOT NULL,
   `ItemType` varchar(32) NOT NULL,
   `Description` varchar(4096) DEFAULT NULL,
-  `AvailStart` date NOT NULL,
-  `AvailEnd` date NOT NULL,
+  `AvailStart` varchar(32) NOT NULL,
+  `AvailEnd` varchar(32) NOT NULL,
   `Address` varchar(128) DEFAULT NULL,
   PRIMARY KEY (`ID`),
   KEY `CreatorID` (`CreatorID`),
