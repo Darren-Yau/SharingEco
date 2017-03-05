@@ -52,7 +52,7 @@ DROP TABLE IF EXISTS `house`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `house` (
   `Rent` int(11) NOT NULL,
-  `Sqft` int(11) NOT NULL,
+  `Guests` int(11) NOT NULL,
   `Rooms` int(11) NOT NULL,
   `Baths` int(11) NOT NULL,
   `ID` int(11) NOT NULL,
