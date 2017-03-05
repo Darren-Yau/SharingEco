@@ -52,7 +52,7 @@ DROP TABLE IF EXISTS `house`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `house` (
   `Rent` int(11) NOT NULL,
-  `Guests` int(11) NOT NULL,
+  `Sqft` int(11) NOT NULL,
   `Rooms` int(11) NOT NULL,
   `Baths` int(11) NOT NULL,
   `ID` int(11) NOT NULL,
@@ -108,13 +108,13 @@ DROP TABLE IF EXISTS `post`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `post` (
   `ID` int(11) NOT NULL,
-  `DateCreated` varchar(32) NOT NULL,
+  `DateCreated` DATE NOT NULL,
   `CreatorID` int(11) NOT NULL,
   `Title` varchar(256) NOT NULL,
   `ItemType` varchar(32) NOT NULL,
   `Description` varchar(4096) DEFAULT NULL,
-  `AvailStart` varchar(32) NOT NULL,
-  `AvailEnd` varchar(32) NOT NULL,
+  `AvailStart` DATE NOT NULL,
+  `AvailEnd` DATE NOT NULL,
   `Address` varchar(128) DEFAULT NULL,
   PRIMARY KEY (`ID`),
   KEY `CreatorID` (`CreatorID`),

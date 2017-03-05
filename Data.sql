@@ -30,26 +30,45 @@ INSERT INTO `eshare`.`post` (`ID`,`DateCreated`,`CreatorID`, `Title`, `ItemType`
 INSERT INTO `eshare`.`post` (`ID`,`DateCreated`,`CreatorID`, `Title`, `ItemType`,`Description`, `AvailStart`, `AvailEnd`,`Address`,`CarID`,`HouseID`, `imgsrc`) VALUES
 (11,2017-03-04,11,'Porsche','CAR','Panamera 2012 Black',2017-02-28,2017-04-28,'Hayward',1,1,'/carimg/car1');
 INSERT INTO `eshare`.`post` (`ID`,`DateCreated`,`CreatorID`, `Title`, `ItemType`,`Description`, `AvailStart`, `AvailEnd`,`Address`,`CarID`,`HouseID`, `imgsrc`) VALUES
-(12,2017-03-04,12,'Dodge','CAR','Avenger',2017-02-28,2017-04-28,'Hayward',1,2,'/carimg/car2');
+(12,2017-03-04,12,'Dodge','CAR','Avenger',2017-02-28,2017-04-28,'Hayward',2,1,'/carimg/car2');
 INSERT INTO `eshare`.`post` (`ID`,`DateCreated`,`CreatorID`, `Title`, `ItemType`,`Description`, `AvailStart`, `AvailEnd`,`Address`,`CarID`,`HouseID`, `imgsrc`) VALUES
-(13,2017-03-04,13,'Toyota','CAR','2018 Camery',2017-02-28,2017-04-28,'Hayward',1,3,'/carimg/car3');
+(13,2017-03-04,13,'Toyota','CAR','2018 Camery',2017-02-28,2017-04-28,'Hayward',3,1,'/carimg/car3');
 INSERT INTO `eshare`.`post` (`ID`,`DateCreated`,`CreatorID`, `Title`, `ItemType`,`Description`, `AvailStart`, `AvailEnd`,`Address`,`CarID`,`HouseID`, `imgsrc`) VALUES
-(14,2017-03-04,14,'Infiniti','CAR','G-37 silver',2017-02-28,2017-04-28,'Hayward',1,4,'/carimg/car4');
+(14,2017-03-04,14,'Infiniti','CAR','G-37 silver',2017-02-28,2017-04-28,'Hayward',4,1,'/carimg/car4');
 INSERT INTO `eshare`.`post` (`ID`,`DateCreated`,`CreatorID`, `Title`, `ItemType`,`Description`, `AvailStart`, `AvailEnd`,`Address`,`CarID`,`HouseID`, `imgsrc`) VALUES
-(15,2017-03-04,15,'Chevrolet','CAR','LT-Sedan',2017-02-28,2017-04-28,'Hayward',1,5,'/carimg/car5');
+(15,2017-03-04,15,'Chevrolet','CAR','LT-Sedan',2017-02-28,2017-04-28,'Hayward',5,1,'/carimg/car5');
 INSERT INTO `eshare`.`post` (`ID`,`DateCreated`,`CreatorID`, `Title`, `ItemType`,`Description`, `AvailStart`, `AvailEnd`,`Address`,`CarID`,`HouseID`, `imgsrc`) VALUES
-(16,2017-03-04,16,'Toyota','CAR','Corolla 2016',2017-02-28,2017-04-28,'Hayward',1,6,'/carimg/car6');
+(16,2017-03-04,16,'Toyota','CAR','Corolla 2016',2017-02-28,2017-04-28,'Hayward',6,1,'/carimg/car6');
 INSERT INTO `eshare`.`post` (`ID`,`DateCreated`,`CreatorID`, `Title`, `ItemType`,`Description`, `AvailStart`, `AvailEnd`,`Address`,`CarID`,`HouseID`, `imgsrc`) VALUES
-(17,2017-03-04,17,'Audi','CAR','A4 2015',2017-02-28,2017-04-28,'Hayward',1,7,'/carimg/car7');
+(17,2017-03-04,17,'Audi','CAR','A4 2015',2017-02-28,2017-04-28,'Hayward',7,1,'/carimg/car7');
 INSERT INTO `eshare`.`post` (`ID`,`DateCreated`,`CreatorID`, `Title`, `ItemType`,`Description`, `AvailStart`, `AvailEnd`,`Address`,`CarID`,`HouseID`, `imgsrc`) VALUES
-(18,2017-03-04,18,'BMW','CAR','BMW 535',2017-02-28,2017-04-28,'Hayward',1,8,'/carimg/car8');
+(18,2017-03-04,18,'BMW','CAR','BMW 535',2017-02-28,2017-04-28,'Hayward',8,1,'/carimg/car8');
 INSERT INTO `eshare`.`post` (`ID`,`DateCreated`,`CreatorID`, `Title`, `ItemType`,`Description`, `AvailStart`, `AvailEnd`,`Address`,`CarID`,`HouseID`, `imgsrc`) VALUES
-(19,2017-03-04,19,'Chevrolet','CAR','Red Cruze',2017-02-28,2017-04-28,'Hayward',1,9,'/carimg/car9');
+(19,2017-03-04,19,'Chevrolet','CAR','Red Cruze',2017-02-28,2017-04-28,'Hayward',9,1,'/carimg/car9');
 INSERT INTO `eshare`.`post` (`ID`,`DateCreated`,`CreatorID`, `Title`, `ItemType`,`Description`, `AvailStart`, `AvailEnd`,`Address`,`CarID`,`HouseID`, `imgsrc`) VALUES
-(20,2017-03-04,20,'Chevrolet','CAR','Evanda',2017-02-28,2017-04-28,'Hayward',1,10,'/carimg/car10');
--- 
+(19,2017-03-04,19,'Chevrolet','CAR','Evanda',2017-02-28,2017-04-28,'Hayward',10,1,'/carimg/car10');
+INSERT INTO `eshare`.`post` (`ID`,`DateCreated`,`CreatorID`, `Title`, `ItemType`,`Description`, `AvailStart`, `AvailEnd`,`Address`,`CarID`,`HouseID`, `imgsrc`) VALUES
+(20,2017-03-04,20,'Hyundai','CAR','Elantra',2017-02-28,2017-04-28,'Hayward',11,1,'/carimg/car11');
+INSERT INTO `eshare`.`post` (`ID`,`DateCreated`,`CreatorID`, `Title`, `ItemType`,`Description`, `AvailStart`, `AvailEnd`,`Address`,`CarID`,`HouseID`, `imgsrc`) VALUES
+(20,2017-03-04,20,'Nissan','CAR','Versa',2017-02-28,2017-04-28,'San Francisco',12,1,'/carimg/car12');
+INSERT INTO `eshare`.`post` (`ID`,`DateCreated`,`CreatorID`, `Title`, `ItemType`,`Description`, `AvailStart`, `AvailEnd`,`Address`,`CarID`,`HouseID`, `imgsrc`) VALUES
+(20,2017-03-04,20,'Tesla','CAR','Models',2017-02-28,2017-04-28,'San Francisco',13,1,'/carimg/car13');
+INSERT INTO `eshare`.`post` (`ID`,`DateCreated`,`CreatorID`, `Title`, `ItemType`,`Description`, `AvailStart`, `AvailEnd`,`Address`,`CarID`,`HouseID`, `imgsrc`) VALUES
+(20,2017-03-04,20,'Accura','CAR','TSX',2017-02-28,2017-04-28,'San Francisco',14,1,'/carimg/car14');
+INSERT INTO `eshare`.`post` (`ID`,`DateCreated`,`CreatorID`, `Title`, `ItemType`,`Description`, `AvailStart`, `AvailEnd`,`Address`,`CarID`,`HouseID`, `imgsrc`) VALUES
+(20,2017-03-04,20,'Ferrari','CAR','FFCoupe',2017-02-28,2017-04-28,'San Francisco',15,1,'/carimg/car15');
+INSERT INTO `eshare`.`post` (`ID`,`DateCreated`,`CreatorID`, `Title`, `ItemType`,`Description`, `AvailStart`, `AvailEnd`,`Address`,`CarID`,`HouseID`, `imgsrc`) VALUES
+(20,2017-03-04,20,'Mazda','CAR','Mazda3',2017-02-28,2017-04-28,'San Francisco',16,1,'/carimg/car16');
+INSERT INTO `eshare`.`post` (`ID`,`DateCreated`,`CreatorID`, `Title`, `ItemType`,`Description`, `AvailStart`, `AvailEnd`,`Address`,`CarID`,`HouseID`, `imgsrc`) VALUES
+(20,2017-03-04,20,'Lexus','CAR','IS250',2017-02-28,2017-04-28,'San Francisco',17,1,'/carimg/car17');
 
-
+INSERT INTO `eshare`.`car` (`Make`,`Model`,`Yr`,`Color`,`Price`,`ID`) VALUES ('Hyundai','Elantra',2015,'Silver',45,11);
+INSERT INTO `eshare`.`car` (`Make`,`Model`,`Yr`,`Color`,`Price`,`ID`) VALUES ('Nissan','Versa',2014,'Blue',40,12);
+INSERT INTO `eshare`.`car` (`Make`,`Model`,`Yr`,`Color`,`Price`,`ID`) VALUES ('Tesla', 'ModelS', 2013, 'Red', 200, 13);
+INSERT INTO `eshare`.`car` (`Make`,`Model`,`Yr`,`Color`,`Price`,`ID`) VALUES ('Accura', 'TSX', 2016, 'Black', 125, 14);
+INSERT INTO `eshare`.`car` (`Make`,`Model`,`Yr`,`Color`,`Price`,`ID`) VALUES ('Ferrari', 'FFCoupe', 2016, 'Red', 1000, 15);
+INSERT INTO `eshare`.`car` (`Make`,`Model`,`Yr`,`Color`,`Price`,`ID`) VALUES ('Mazda', 'Mazda3', 2014, 'Blue', 80, 16);
+INSERT INTO `eshare`.`car` (`Make`,`Model`,`Yr`,`Color`,`Price`,`ID`) VALUES ('Lexsus', 'IS250', 2016, 'White', 115, 17);
 
 
 INSERT INTO `eshare`.`car` (`Make`,`Model`,`Yr`,`Color`,`Price`,`ID`) VALUES ('Porsche','Panamera',2012,'Black',100,1);
@@ -64,21 +83,21 @@ INSERT INTO `eshare`.`car` (`Make`,`Model`,`Yr`,`Color`,`Price`,`ID`) VALUES ('C
 INSERT INTO `eshare`.`car` (`Make`,`Model`,`Yr`,`Color`,`Price`,`ID`) VALUES ('Chevrolet','Evanda',2000,'Grey',30,10);
 INSERT INTO `eshare`.`car` (`Make`,`Model`,`Yr`,`Color`,`Price`,`ID`) VALUES ('Hyundai','Elantra',2015,'Silver',45,11);
 INSERT INTO `eshare`.`car` (`Make`,`Model`,`Yr`,`Color`,`Price`,`ID`) VALUES ('Nissan','Versa',2014,'Blue',40,12);
-INSERT INTO `eshare`.`car` (`Make`, `Model`, `Yr`, `Color`, `Price`, `ID`) VALUES ('Tesla', 'ModelS', 2013, 'Red', 200, 13);
-INSERT INTO `eshare`.`car` (`Make`, `Model`, `Yr`, `Color`, `Price`, `ID`) VALUES ('Accura', 'TSX', 2016, 'Black', 125, 14);
-INSERT INTO `eshare`.`car` (`Make`, `Model`, `Yr`, `Color`, `Price`, `ID`) VALUES ('Ferrari', 'FFCoupe', 2016, 'Red', 1000, 15);
-INSERT INTO `eshare`.`car` (`Make`, `Model`, `Yr`, `Color`, `Price`, `ID`) VALUES ('Mazda', 'Mazda3', 2014, 'Blue', 80, 16);
-INSERT INTO `eshare`.`car` (`Make`, `Model`, `Yr`, `Color`, `Price`, `ID`) VALUES ('Lexsus', 'IS250', 2016, 'White', 115, 17);
+INSERT INTO `eshare`.`car` (`Make`,`Model`,`Yr`,`Color`,`Price`,`ID`) VALUES ('Tesla', 'ModelS', 2013, 'Red', 200, 13);
+INSERT INTO `eshare`.`car` (`Make`,`Model`,`Yr`,`Color`,`Price`,`ID`) VALUES ('Accura', 'TSX', 2016, 'Black', 125, 14);
+INSERT INTO `eshare`.`car` (`Make`,`Model`,`Yr`,`Color`,`Price`,`ID`) VALUES ('Ferrari', 'FFCoupe', 2016, 'Red', 1000, 15);
+INSERT INTO `eshare`.`car` (`Make`,`Model`,`Yr`,`Color`,`Price`,`ID`) VALUES ('Mazda', 'Mazda3', 2014, 'Blue', 80, 16);
+INSERT INTO `eshare`.`car` (`Make`,`Model`,`Yr`,`Color`,`Price`,`ID`) VALUES ('Lexsus', 'IS250', 2016, 'White', 115, 17);
 
 
-INSERT INTO `eshare`.`house` (`Rent`, `Guests`,`rooms`,`baths`, `ID`) VALUES (65,3,2,2,201);
-INSERT INTO `eshare`.`house` (`Rent`, `Guests`,`rooms`,`baths`, `ID`) VALUES (45,1,1,1,202);
-INSERT INTO `eshare`.`house` (`Rent`, `Guests`,`rooms`,`baths`, `ID`) VALUES (42,1,1,1,203);
-INSERT INTO `eshare`.`house` (`Rent`, `Guests`,`rooms`,`baths`, `ID`) VALUES (118,6,3,2,204);
-INSERT INTO `eshare`.`house` (`Rent`, `Guests`,`rooms`,`baths`, `ID`) VALUES (85,16,8,4,205);
-INSERT INTO `eshare`.`house` (`Rent`, `Guests`,`rooms`,`baths`, `ID`) VALUES (69,2,1,1,206);
-INSERT INTO `eshare`.`house` (`Rent`, `Guests`,`rooms`,`baths`, `ID`) VALUES (199,3,1,1,207);
-INSERT INTO `eshare`.`house` (`Rent`, `Guests`,`rooms`,`baths`, `ID`) VALUES (49,1,1,1,208);
-INSERT INTO `eshare`.`house` (`Rent`, `Guests`,`rooms`,`baths`, `ID`) VALUES (135,2,1,1,209);
-INSERT INTO `eshare`.`house` (`Rent`, `Guests`,`rooms`,`baths`, `ID`) VALUES (170,2,1,1,210);
+INSERT INTO `eshare`.`house` (`Rent`, `sqft`,`rooms`,`baths`, `ID`) VALUES (65,200,2,2,201);
+INSERT INTO `eshare`.`house` (`Rent`, `sqft`,`rooms`,`baths`, `ID`) VALUES (45,100,1,1,202);
+INSERT INTO `eshare`.`house` (`Rent`, `sqft`,`rooms`,`baths`, `ID`) VALUES (42,100,1,1,203);
+INSERT INTO `eshare`.`house` (`Rent`, `sqft`,`rooms`,`baths`, `ID`) VALUES (118,60,3,2,204);
+INSERT INTO `eshare`.`house` (`Rent`, `sqft`,`rooms`,`baths`, `ID`) VALUES (85,16,8,4,205);
+INSERT INTO `eshare`.`house` (`Rent`, `sqft`,`rooms`,`baths`, `ID`) VALUES (69,315,1,1,206);
+INSERT INTO `eshare`.`house` (`Rent`, `sqft`,`rooms`,`baths`, `ID`) VALUES (199,135,1,1,207);
+INSERT INTO `eshare`.`house` (`Rent`, `sqft`,`rooms`,`baths`, `ID`) VALUES (49,200,1,1,208);
+INSERT INTO `eshare`.`house` (`Rent`, `sqft`,`rooms`,`baths`, `ID`) VALUES (135,300,1,1,209);
+INSERT INTO `eshare`.`house` (`Rent`, `sqft`,`rooms`,`baths`, `ID`) VALUES (170,350,1,1,210);
 
