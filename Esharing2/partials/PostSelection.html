@@ -1,223 +1,111 @@
 <div class="row">
     <div class="col-md-2" style="text-align: right;">
-        <a href="#" class="btn btn-sq-lg btn-success">
+        <a href="#/editHouse/0" class="btn btn-sq-lg btn-success">
             <br/><i class="glyphicon glyphicon-home" style="font-size: 50px;"></i><br/> Post your house
         </a>
     </div>
     <div class="col-md-10">
-      <div class="container-fluid">
-	<div class="panel panel-success">
-		<div class="panel-heading">Your Orders</div>
-		<div class="panel-body">
-			<table class="table table-hover">
-				<thead>
-					<tr>
-						<th>Title</th>
-						<th>Available Start</th>
-						<th>Available End</th>
-						<th>Address</th>
-						<th>Rent</th>
-						<th>Sqft</th>
-						<th>Rooms</th>
-						<th>Baths</th>
-						<th>Edit</th>
-						<th>Delete</th>
-					</tr>
-				</thead>
-				<tbody>
-          <tr data-ng-repeat="data in Posts | filter: {ItemType:'House'}">
-            <td>{{data.Title}}</td>
-            <td>{{data.AvailStart}}</td>
-            <td>{{data.AvailEnd}}</td>
-            <td>{{data.Address}}</td>
-            <td>{{data.Rent}}</td>
-            <td>{{data.Sqft}}</td>
-            <td>{{data.Rooms}}</td>
-            <td>{{data.Baths}}</td>
-            <td><button type="button"
-									class="btn btn-primary btn-sm open-Edit" data-toggle="modal" data-id="43"
-									data-target="#myModal">
-									<span class="glyphicon glyphicon-pencil"></span> Edit
-								</button></td>
-							<td><button type="button" ng-click="deletePost({{data.id}})"
-									class="btn btn-danger btn-sm open-Delete">
+        <div class="container-fluid">
+            <div class="panel panel-success">
+                <div class="panel-heading">Your Orders</div>
+                <div class="panel-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Available Start</th>
+                                <th>Available End</th>
+                                <th>Address</th>
+                                <th>Rent</th>
+                                <th>Sqft</th>
+                                <th>Rooms</th>
+                                <th>Baths</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-ng-repeat="data in Houses">
+                                <td>{{data.Title}}</td>
+                                <td>{{data.AvailStart}}</td>
+                                <td>{{data.AvailEnd}}</td>
+                                <td>{{data.Address}}</td>
+                                <td>{{data.Rent}}</td>
+                                <td>{{data.Sqft}}</td>
+                                <td>{{data.Rooms}}</td>
+                                <td>{{data.Baths}}</td>
+                                <td>
+                                    <a class="btn btn-primary btn-sm open-Edit" href="#/editHouse/{{data.ID}}">
+                                        <span class="glyphicon glyphicon-pencil"></span> Edit
+                                    </a>
+                                </td>
+                                <td><button type="button" ng-click="deleteHouse(data.ID,data.HouseID)" class="btn btn-danger btn-sm open-Delete">
 									<span class="glyphicon glyphicon-remove"></span> Remove
 								</button></td>
-          </tr>
-				</tbody>
-			</table>
-			<div id="myModal" class="modal fade" role="dialog">
-				<div class="modal-dialog">
-
-					<!-- Modal content-->
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal">&times;</button>
-							<h4 class="modal-title">Edit your shipping info</h4>
-						</div>
-						<div class="modal-body">
-							<p>Shipping Information.</p>
-							<input type="hidden" id="orderId" value="">
-							<div class="form-group">
-								<label for="modal_username">Name:</label> <input type="text"
-									class="form-control" id="modal_username">
-							</div>
-							<div class="form-group">
-								<label for="modal_moboile">Mobile:</label> <input type="text"
-									class="form-control" id="modal_moboile">
-							</div>
-							<div class="form-group">
-								<label for="modal_street">Street:</label> <input type="text"
-									class="form-control" id="modal_street">
-							</div>
-							<div class="form-group">
-								<label for="modal_city">City:</label> <input type="text"
-									class="form-control" id="modal_city">
-							</div>
-							<div class="form-group">
-								<label for="modal_remarks">Remarks:</label>
-								<textarea class="form-control" rows="5" id="modal_remarks"></textarea>
-							</div>
-						</div>
-						<div class="modal-footer">
-						    <button type="button" class="btn btn-success" id="update" data-dismiss="modal">Update</button>
-							<button type="button" class="btn btn-default"
-								data-dismiss="modal">Close</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="panel-footer">
-	    <div class="pull-right">Total prices: $0
-		<button type="button" class="btn btn-success">Check out</button>
-		</div><div class="clearfix"></div>
-		</div>
-	</div>
-</div>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="panel-footer">
+                </div>
+            </div>
+        </div>
 
     </div>
 </div>
 <div class="row">
     <div class="col-md-2" style="text-align: right;">
-        <a href="#" class="btn btn-sq-lg btn-info">
+        <a href="#/editPost/0/0" class="btn btn-sq-lg btn-info">
             <br/><i class="glyphicon glyphicon-road" style="font-size: 50px;"></i><br/> Post your car
         </a>
     </div>
     <div class="col-md-10">
-      <div class="container-fluid">
-	<div class="panel panel-primary">
-		<div class="panel-heading">Your Orders</div>
-		<div class="panel-body">
-			<table class="table table-hover">
-				<thead>
-					<tr>
-            <th>Title</th>
-						<th>Available Start</th>
-						<th>Available End</th>
-						<th>Address</th>
-						<th>Make</th>
-						<th>Model</th>
-						<th>Year</th>
-						<th>Color</th>
-            <th>Price</th>
-						<th>Edit</th>
-						<th>Delete</th>
-					</tr>
-				</thead>
-				<tbody>
-          <tr data-ng-repeat="data in Posts | filter: {ItemType:'car'}">
-            <td>{{data.Title}}</td>
-            <td>{{data.AvailStart}}</td>
-            <td>{{data.AvailEnd}}</td>
-            <td>{{data.Address}}</td>
-            <td>{{data.Make}}</td>
-            <td>{{data.Model}}</td>
-            <td>{{data.Yr}}</td>
-            <td>{{data.Color}}</td>
-            <td>{{data.Price}}</td>
-            <td><button type="button"
-									class="btn btn-primary btn-sm open-Edit" data-toggle="modal" data-id="43"
-									data-target="#myModal">
-									<span class="glyphicon glyphicon-pencil"></span> Edit
-								</button></td>
-							<td><button type="button" ng-click="deletePost({{data.id}})"
-									class="btn btn-danger btn-sm open-Delete">
+        <div class="container-fluid">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Your Orders</div>
+                <div class="panel-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Available Start</th>
+                                <th>Available End</th>
+                                <th>Address</th>
+                                <th>Make</th>
+                                <th>Model</th>
+                                <th>Year</th>
+                                <th>Color</th>
+                                <th>Price</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-ng-repeat="data in Cars">
+                                <td>{{data.Title}}</td>
+                                <td>{{data.AvailStart}}</td>
+                                <td>{{data.AvailEnd}}</td>
+                                <td>{{data.Address}}</td>
+                                <td>{{data.Make}}</td>
+                                <td>{{data.Model}}</td>
+                                <td>{{data.Yr}}</td>
+                                <td>{{data.Color}}</td>
+                                <td>{{data.Price}}</td>
+                                <td>
+                                    <a class="btn btn-primary btn-sm open-Edit" href="#/editPost/{{data.ID}}/{{data.CarID}}">
+                                        <span class="glyphicon glyphicon-pencil"></span> Edit
+                                    </a>
+                                </td>
+                                <td><button type="button" ng-click="deleteCar(data.ID,data.CarID)" class="btn btn-danger btn-sm open-Delete">
 									<span class="glyphicon glyphicon-remove"></span> Remove
-								</button></td></script>
-                <script type="text/ng-template" id="edit">
-        <td><input type="text" ng-model=Posts.Title class="form-control input-sm"/></td>
-        <td><input type="text" ng-model=Posts.AvailStart class="form-control input-sm"/></td>
-        <td><input type="text" ng-model=Posts.AvailEnd class="form-control input-sm"/></td>
-        <td><input type="text" ng-model=Posts.Address class="form-control input-sm"/></td>
-        <td><input type="text" ng-model=Posts.Make class="form-control input-sm"/></td>
-        <td><input type="text" ng-model=Posts.Model class="form-control input-sm"/></td>
-        <td><input type="text" ng-model=Posts.Yr class="form-control input-sm"/></td>
-        <td><input type="text" ng-model=Posts.Color class="form-control input-sm"/></td>
-        <td><input type="text" ng-model=Posts.Price class="form-control input-sm"/></td>
-        <td>
-          <select class="form-control input-sm" ng-model=Posts.active>
-            <option value='1'>Yes</option>
-            <option value='0'>No</option>
-          </select>
-        </td>
-        <td>
-         <button type="button" class="btn btn-primary" ng-click="updateEmployee(employee)">Save</button>
-         <button type="button" class="btn btn-danger" ng-click="reset()">Cancel</button>
-        </td>
-       </script>
-          </tr>
-				</tbody>
-			</table>
-			<div id="myModal" class="modal fade" role="dialog">
-				<div class="modal-dialog">
-
-					<!-- Modal content-->
-					<div class="modal-content">
-						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal">&times;</button>
-							<h4 class="modal-title">Edit your shipping info</h4>
-						</div>
-						<div class="modal-body">
-							<p>Shipping Information.</p>
-							<input type="hidden" id="orderId" value="">
-							<div class="form-group">
-								<label for="modal_username">Name:</label> <input type="text"
-									class="form-control" id="modal_username">
-							</div>
-							<div class="form-group">
-								<label for="modal_moboile">Mobile:</label> <input type="text"
-									class="form-control" id="modal_moboile">
-							</div>
-							<div class="form-group">
-								<label for="modal_street">Street:</label> <input type="text"
-									class="form-control" id="modal_street">
-							</div>
-							<div class="form-group">
-								<label for="modal_city">City:</label> <input type="text"
-									class="form-control" id="modal_city">
-							</div>
-							<div class="form-group">
-								<label for="modal_remarks">Remarks:</label>
-								<textarea class="form-control" rows="5" id="modal_remarks"></textarea>
-							</div>
-						</div>
-						<div class="modal-footer">
-						    <button type="button" class="btn btn-success" id="update" data-dismiss="modal">Update</button>
-							<button type="button" class="btn btn-default"
-								data-dismiss="modal">Close</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="panel-footer">
-	    <div class="pull-right">Total prices: $0
-		<button type="button" class="btn btn-success">Check out</button>
-		</div><div class="clearfix"></div>
-		</div>
-	</div>
-</div>
+								</button></td>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="panel-footer">
+                </div>
+            </div>
+        </div>
 
     </div>
 </div>
