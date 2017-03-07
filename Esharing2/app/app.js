@@ -75,6 +75,9 @@ app.factory("services", ['$http', function($http) {
         return results.data;
       });
     };
+    obj.SendMail = function(Mail){
+        return $http.post(serviceBase + sendMail,Mail);
+    };
     return obj;
 }]);
 
@@ -228,6 +231,7 @@ app.controller('CarViewCtrl', function($scope, services, $routeParams, Car, $loc
         $scope.title = 'I am interested in your car ' + Car.data.make + Car.data.model;
         Mail.title = $scope.title;
         Mail.content = $scope.content;
+        alert(Mail);
         service.sendMail(Mail);
     };
 });

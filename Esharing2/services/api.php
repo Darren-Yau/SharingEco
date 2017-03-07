@@ -5,8 +5,8 @@
 
 		const DB_SERVER = "localhost:3306";
 		const DB_USER = "root";
-		const DB_PASSWORD = "1234";
-		const DB = "Eshare";
+		const DB_PASSWORD = "root";
+		const DB = "eshare";
 
 		private $db = NULL;
 		private $mysqli = NULL;
@@ -139,7 +139,7 @@
        if($this->get_request_method() != "POST"){
        $this->response('',406);
        }
-       $Item = json_decode(file_get_contents("php://input"),true);
+     
        $column_names = array('Make', 'Model', 'Yr', 'Color', 'Price');
        $keys = array_keys($Item['Car']);
        $columns = '';
@@ -213,7 +213,7 @@
   			}
   			$id = (int)$this->_request['id'];
   			if($id > 0){
-  				$query="SELECT * FROM post, car, user WHERE post.ID=$id AND post.CarID=car.CarID AND post.CreatorID=user.ID";
+  				$query="SELECT post.*, car.*, user.ID, user.Fname, user.Email FROM post, car, user WHERE post.ID=$id AND post.CarID=car.CarID AND post.CreatorID=user.ID";
   				$r = $this->mysqli->query($query) or die($this->mysqli->error.__LINE__);
   				if($r->num_rows > 0) {
   					$result = $r->fetch_assoc();
@@ -314,6 +314,8 @@
         $row=$r->fetch_assoc();
         $hash = md5($pass.$row["PassSalt"]);
 				if($hash == $row["PassHash"]){
+          $_SESSION["email"] = $email;
+          $_SESSION["password"] = $pass;
           $this->response(1,200);
         }else
         $this->response(0,200);
@@ -352,6 +354,32 @@
 		}
 		$this->response('',204);	// If no records "No Content" status
 	}
+
+  private function SendMail(){
+      $Mail = json_decode(file_get_contents("php://input"),true);
+
+      //senderName
+      $query = "SELECT Fname FROM User WHERE ID= $Mail.sendID";
+      $result = $this->mysqli($query);
+      $row = $result->fetch_assoc();
+
+      $senderName = $row.Fname;
+
+
+      $query = "SELECT Fname FROM User WHERE ID= $Mail.recID";
+      $result = $this->mysqli($query);
+      $row = $result->fetch_assoc();
+
+      $recName = $row.Fname;
+
+
+
+      $now = time();
+      $query = "INSERT INTO MAIL(SendID, RecID, TimeSent,Message, Sender, Receiver) VALUES($Mail.sendID, $Mail.recID, $now, $senderName, $recName) ";
+      $result = $this->mysqli($query);
+      $this->response($this->json($result), 200);
+  }
+
 		/*
 		 *	Encode array into JSON
 		*/
