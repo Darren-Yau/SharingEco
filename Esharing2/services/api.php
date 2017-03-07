@@ -264,6 +264,7 @@
       }
       $email=$this->_request['email'];
       $query="SELECT c.Email FROM user c where c.Email='$email'";
+      echo($query);
       $r=$this->mysqli->query($query) or die($this->mysqli->error._LINE_);
       if($r->num_rows>0){
         $result=$r->fetch_assoc();
