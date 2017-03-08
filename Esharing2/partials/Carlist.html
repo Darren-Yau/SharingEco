@@ -1,26 +1,146 @@
 <div class="row content">
-    <div class="col-md-3 sidenav">
-        <h4>Search</h4>
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search Blog..">
-            <span class="input-group-btn">
-          <button class="btn btn-default" type="button">
-            <span class="glyphicon glyphicon-search"></span>
-            </button>
-            </span>
-        </div>
-    </div>
-
-    <div class="col-md-9">
-        <div class="row">
-              <div class="col-sm-4" ng-repeat="data in Cars">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">{{data.Title}}</div>
-                    <div class="panel-body"><a href="#/Cardetail/{{data.ID}}">
-                      <img src="{{data.imgsrc}}" class="img-responsive" style="width:100%" alt="Image"></a></div>
-                    <div class="panel-footer">{{data.Make}}  {{data.Model}}  ${{data.Price}}</div>
-                </div>
+   <div class="col-md-3">
+      <div id="accordion" class="panel panel-primary behclick-panel">
+         <div class="panel-heading">
+            <h3 class="panel-title">Search Filter Car</h3>
+         </div>
+         <div class="panel-body">
+           <div id="custom-search-input">
+              <div class="input-group col-md-12">
+                 <input type="text"  ng-model="query" class="search-query form-control"/>
+                 <button class="btn btn-danger" type="button">
+                 <span class=" glyphicon glyphicon-search"></span>
+                 </button>
+              </div>
+           </div>
+            <div class="panel-heading ">
+               <h4 class="panel-title">
+                  <a target="_self" data-toggle="collapse" href="#collapse0">
+                  <i class="indicator fa fa-caret-down" aria-hidden="true"></i> Address
+                  </a>
+               </h4>
             </div>
-        </div>
-    </div>
+            <div id="collapse0" class="panel-collapse collapse in">
+               <ul class="list-group">
+                  <li class="list-group-item">
+                     <div class="checkbox">
+                        <label>
+                        <input ng-click="includeAddress('union city')" type="checkbox" value="">
+                        union city
+                        </label>
+                     </div>
+                  </li>
+                  <li class="list-group-item">
+                     <div class="checkbox">
+                        <label>
+                        <input ng-click="includeAddress('San Francisco')" type="checkbox" value="">
+                        San Francisco
+                        </label>
+                     </div>
+                  </li>
+                  <li class="list-group-item">
+                     <div class="checkbox">
+                        <label>
+                        <input ng-click="includeAddress('Hayward')" type="checkbox" value="">
+                        Hayward
+                        </label>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+            <div class="panel-heading ">
+               <h4 class="panel-title">
+                  <a target="_self" data-toggle="collapse" href="#collapse1">
+                  <i class="indicator fa fa-caret-down" aria-hidden="true"></i> Brand
+                  </a>
+               </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse in">
+               <ul class="list-group">
+                  <li class="list-group-item">
+                     <div class="checkbox">
+                        <label>
+                        <input ng-click="includeMake('Toyota')" type="checkbox" value="">
+                        Toyota
+                        </label>
+                     </div>
+                  </li>
+                  <li class="list-group-item">
+                     <div class="checkbox">
+                        <label>
+                        <input ng-click="includeMake('BMW')" type="checkbox" value="">
+                        BMW
+                        </label>
+                     </div>
+                  </li>
+                  <li class="list-group-item">
+                     <div class="checkbox">
+                        <label>
+                        <input ng-click="includeMake('Chevrolet')" type="checkbox" value="">
+                        Chevrolet
+                        </label>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+            <div class="panel-heading">
+               <h4 class="panel-title">
+                  <a target="_self" data-toggle="collapse" href="#collapse3"><i class="indicator fa fa-caret-down" aria-hidden="true"></i> Color</a>
+               </h4>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse in">
+               <ul class="list-group">
+                  <li class="list-group-item">
+                     <div class="checkbox">
+                        <label>
+                        <input ng-click="includeColor('Red')" type="checkbox" value="">
+                        Red
+                        </label>
+                     </div>
+                  </li>
+                  <li class="list-group-item">
+                     <div class="checkbox">
+                        <label>
+                        <input ng-click="includeColor('Black')" type="checkbox" value="">
+                        Black
+                        </label>
+                     </div>
+                  </li>
+                  <li class="list-group-item">
+                     <div class="checkbox">
+                        <label>
+                        <input ng-click="includeColor('White')" type="checkbox" value="">
+                        White
+                        </label>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="col-md-9">
+      <div class="row">
+         <div class="col-sm-4" ng-repeat="data in Cars | filter:query">
+            <div class="panel panel-primary">
+               <div class="panel-heading">{{data.Title}}</div>
+               <div class="panel-body">
+                  <a href="#/Cardetail/{{data.ID}}">
+                  <img src="{{data.imgsrc}}" class="img-responsive" style="width:100%" alt="Image"></a>
+               </div>
+               <div class="panel-footer">{{data.Make}} {{data.Model}} ${{data.Price}}</div>
+            </div>
+         </div>
+      </div>
+   </div>
 </div>
+<script>
+   function toggleChevron(e) {
+       $(e.target)
+           .prev('.panel-heading')
+           .find("i.indicator")
+           .toggleClass('fa-caret-down fa-caret-right');
+   }
+   $('#accordion').on('hidden.bs.collapse', toggleChevron);
+   $('#accordion').on('shown.bs.collapse', toggleChevron);
+</script>

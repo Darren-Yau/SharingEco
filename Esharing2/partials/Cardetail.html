@@ -1,7 +1,7 @@
 <div class="container">
     <div class="center">
         <div class="col-md-6 col-md-offset-3">
-            <h2>Title</h2>
+            <h2>{{Car.Title}}</h2>
             <hr>
             <h5><span class="glyphicon glyphicon-time"></span> Post by {{Car.Fname}} {{Car.Lname}}, Sep 24, 2015.</h5>
         </div>
@@ -14,14 +14,14 @@
             <img src="{{Car.imgsrc}}" alt="">
         </div>
         <div class="col-md-3">
-            <h4>Send Mail:</h4>
-            <input type="text" class="form-control" placeholder="subject">
+            <h4>Send a Mail to the owner:</h4>
+            <hr>
+            <textarea ng-model="content" class="form-control" rows="12" placeholder="I am interested in your {{Car.Make}} {{Car.Model}}"></textarea>
             <br>
-            <textarea class="form-control" rows="12"></textarea>
-            <br>
-            <button type="submit" class="btn btn-lg btn-success btn-block">Submit</button>
+            <a ng-click="sendMail()" class="btn btn-lg btn-success btn-block">Submit</a>
         </div>
     </div>
+    <br>
 
     <div class="row">
         <div class="col-md-6">
@@ -41,7 +41,7 @@
                     </tr>
                     <tr>
                         <th scope="row">Price:</th>
-                        <td>${{Car.Price}}</td>
+                        <td>${{Car.Price}} per day</td>
                     </tr>
                 </tbody>
             </table>
