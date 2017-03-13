@@ -1,0 +1,146 @@
+<div class="row content">
+   <div class="col-md-3">
+      <div id="accordion" class="panel panel-primary behclick-panel">
+         <div class="panel-heading">
+            <h3 class="panel-title">Search Filter Car</h3>
+         </div>
+         <div class="panel-body">
+           <div id="custom-search-input">
+              <div class="input-group col-md-12">
+                 <input type="text"  ng-model="query" class="search-query form-control"/>
+                 <button class="btn btn-danger" type="button">
+                 <span class=" glyphicon glyphicon-search"></span>
+                 </button>
+              </div>
+           </div>
+            <div class="panel-heading ">
+               <h4 class="panel-title">
+                  <a target="_self" data-toggle="collapse" href="#collapse0">
+                  <i class="indicator fa fa-caret-down" aria-hidden="true"></i> Address
+                  </a>
+               </h4>
+            </div>
+            <div id="collapse0" class="panel-collapse collapse in">
+               <ul class="list-group">
+                  <li class="list-group-item">
+                     <div class="checkbox">
+                        <label>
+                        <input ng-click="includeAddress('union city')" type="checkbox" value="">
+                        union city
+                        </label>
+                     </div>
+                  </li>
+                  <li class="list-group-item">
+                     <div class="checkbox">
+                        <label>
+                        <input ng-click="includeAddress('fremont')" type="checkbox" value="">
+                        fremont
+                        </label>
+                     </div>
+                  </li>
+                  <li class="list-group-item">
+                     <div class="checkbox">
+                        <label>
+                        <input ng-click="includeAddress('Hayward')" type="checkbox" value="">
+                        Hayward
+                        </label>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+            <div class="panel-heading ">
+               <h4 class="panel-title">
+                  <a target="_self" data-toggle="collapse" href="#collapse1">
+                  <i class="indicator fa fa-caret-down" aria-hidden="true"></i> Rooms
+                  </a>
+               </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse in">
+               <ul class="list-group">
+                  <li class="list-group-item">
+                     <div class="checkbox">
+                        <label>
+                        <input ng-click="includeRoom(1)" type="checkbox" value="">
+                        1
+                        </label>
+                     </div>
+                  </li>
+                  <li class="list-group-item">
+                     <div class="checkbox">
+                        <label>
+                        <input ng-click="includeRoom(2)" type="checkbox" value="">
+                        2
+                        </label>
+                     </div>
+                  </li>
+                  <li class="list-group-item">
+                     <div class="checkbox">
+                        <label>
+                        <input ng-click="includeRoom(3)" type="checkbox" value="">
+                        3
+                        </label>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+            <div class="panel-heading">
+               <h4 class="panel-title">
+                  <a target="_self" data-toggle="collapse" href="#collapse3"><i class="indicator fa fa-caret-down" aria-hidden="true"></i> Baths</a>
+               </h4>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse in">
+               <ul class="list-group">
+                  <li class="list-group-item">
+                     <div class="checkbox">
+                        <label>
+                        <input ng-click="includeBath(1)" type="checkbox" value="">
+                        1
+                        </label>
+                     </div>
+                  </li>
+                  <li class="list-group-item">
+                     <div class="checkbox">
+                        <label>
+                        <input ng-click="includeBath(2)" type="checkbox" value="">
+                        2
+                        </label>
+                     </div>
+                  </li>
+                  <li class="list-group-item">
+                     <div class="checkbox">
+                        <label>
+                        <input ng-click="includeBath(3)" type="checkbox" value="">
+                        3
+                        </label>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="col-md-9">
+      <div class="row">
+         <div class="col-sm-4" ng-repeat="data in Houses | filter:query">
+            <div class="panel panel-primary">
+               <div class="panel-heading">{{data.Title}}</div>
+               <div class="panel-body">
+                  <a href="#/Housedetail/{{data.ID}}">
+                  <img src="{{data.imgsrc}}" class="img-responsive" style="width:100%" alt="Image"></a>
+               </div>
+               <div class="panel-footer">{{data.Rooms}} Room + {{data.Baths}} Bath ${{data.Rent}}</div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<script>
+   function toggleChevron(e) {
+       $(e.target)
+           .prev('.panel-heading')
+           .find("i.indicator")
+           .toggleClass('fa-caret-down fa-caret-right');
+   }
+   $('#accordion').on('hidden.bs.collapse', toggleChevron);
+   $('#accordion').on('shown.bs.collapse', toggleChevron);
+</script>

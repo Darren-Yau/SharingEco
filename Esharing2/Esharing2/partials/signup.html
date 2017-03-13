@@ -1,0 +1,65 @@
+<script
+	src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script
+	src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js">
+</script>
+
+<div id="signup" class="tab-pane">
+				<div class="panel panel-success">
+					<div class="panel-heading"></div>
+					<div class="panel-body">
+						<form role="form">
+
+							<div class="form-group">
+								<label class="control-label" for="firstname">First Name</label> <input
+									class="form-control" ng-model="Fname" data-error="Please enter your first name."
+									name="firstname" id="firstname" placeholder="" type="text" required />
+								<div class="help-block with-errors"></div>
+							</div>
+
+              <div class="form-group">
+								<label class="control-label" for="lastname">Last Name</label> <input
+									class="form-control" ng-model="Lname"  data-error="Please enter your last name."
+									name="lastname" id="lastname" placeholder="" type="text" required />
+								<div class="help-block with-errors"></div>
+							</div>
+
+							<div class="form-group">
+								<label for="inputEmail" class="control-label">Email {{message}}</label> <input
+									type="email"  ng-model="Email" class="form-control" id="inputEmail" name="inputEmail"
+									placeholder="Email" required>
+								<div class="help-block with-errors"></div>
+							</div>
+
+							<div class="form-group">
+								<label for="inputPassword" class="control-label">Password</label>
+								<div class="form-group">
+									<input type="password" ng-model="Password" data-minlength="5" class="form-control"
+										id="inputPassword" name="inputPassword"
+										data-error="must enter minimum of 5 characters"
+										placeholder="Password" required>
+									<div class="help-block with-errors"></div>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label for="inputPasswordConfirm" class="control-label">Password again</label>
+								<div class="form-group">
+									<input type="password" data-minlength="5" class="form-control"
+										id="inputPasswordConfirm" data-match="#inputPassword"
+										data-match-error="Whoops, these don't match"
+										placeholder="Confirm" required>
+									<div class="help-block with-errors"></div>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<button class="btn btn-success" ng-click="signup()">Submit</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
