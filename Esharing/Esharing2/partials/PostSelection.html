@@ -1,0 +1,111 @@
+<div class="row">
+    <div class="col-md-2" style="text-align: right;">
+        <a href="#/editHousePost/0/0" class="btn btn-sq-lg btn-success">
+            <br/><i class="glyphicon glyphicon-home" style="font-size: 50px;"></i><br/> Post your house
+        </a>
+    </div>
+    <div class="col-md-10">
+        <div class="container-fluid">
+            <div class="panel panel-success">
+                <div class="panel-heading">Your Orders</div>
+                <div class="panel-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Available Start</th>
+                                <th>Available End</th>
+                                <th>Address</th>
+                                <th>Rent</th>
+                                <th>Sqft</th>
+                                <th>Rooms</th>
+                                <th>Baths</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-ng-repeat="data in Houses">
+                                <td>{{data.Title}}</td>
+                                <td>{{data.AvailStart}}</td>
+                                <td>{{data.AvailEnd}}</td>
+                                <td>{{data.Address}}</td>
+                                <td>{{data.Rent}}</td>
+                                <td>{{data.Sqft}}</td>
+                                <td>{{data.Rooms}}</td>
+                                <td>{{data.Baths}}</td>
+                                <td>
+                                    <a class="btn btn-primary btn-sm open-Edit" href="#/editHousePost/{{data.ID}}/{{data.HouseID}}">
+                                        <span class="glyphicon glyphicon-pencil"></span> Edit
+                                    </a>
+                                </td>
+                                <td><button type="button" ng-click="deleteHouse(data.ID,data.HouseID)" class="btn btn-danger btn-sm open-Delete">
+									<span class="glyphicon glyphicon-remove"></span> Remove
+								</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="panel-footer">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-2" style="text-align: right;">
+        <a href="#/editCarPost/0/0" class="btn btn-sq-lg btn-info">
+            <br/><i class="glyphicon glyphicon-road" style="font-size: 50px;"></i><br/> Post your car
+        </a>
+    </div>
+    <div class="col-md-10">
+        <div class="container-fluid">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Your Orders</div>
+                <div class="panel-body">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Available Start</th>
+                                <th>Available End</th>
+                                <th>Address</th>
+                                <th>Make</th>
+                                <th>Model</th>
+                                <th>Year</th>
+                                <th>Color</th>
+                                <th>Price</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr data-ng-repeat="data in Cars">
+                                <td>{{data.Title}}</td>
+                                <td>{{data.AvailStart}}</td>
+                                <td>{{data.AvailEnd}}</td>
+                                <td>{{data.Address}}</td>
+                                <td>{{data.Make}}</td>
+                                <td>{{data.Model}}</td>
+                                <td>{{data.Yr}}</td>
+                                <td>{{data.Color}}</td>
+                                <td>{{data.Price}}</td>
+                                <td>
+                                    <a class="btn btn-primary btn-sm open-Edit" href="#/editCarPost/{{data.ID}}/{{data.CarID}}">
+                                        <span class="glyphicon glyphicon-pencil"></span> Edit
+                                    </a>
+                                </td>
+                                <td><button type="button" ng-click="deleteCar(data.ID,data.CarID)" class="btn btn-danger btn-sm open-Delete">
+									<span class="glyphicon glyphicon-remove"></span> Remove
+								</button></td>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="panel-footer">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

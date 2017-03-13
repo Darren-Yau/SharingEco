@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+    <title>item</title>
+</head>
+
+<body>
+    <div class="jumbotron">
+        <div class="container text-center" style="color: white">
+            <h1>Rent My Stuff</h1>
+            <p>Zeta: Priyanka Shaganti, Jyh-Yeuan Chen, Matt Davis, Kaichen Zhu, Darren yau</p>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                <a class="navbar-brand" href="#"><img src="./images/logo.jpg" height="40px" alt="logo" /></a>
+            </div>
+            <div ng-controller="UserConsole" class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Items <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#cars">Car</a></li>
+                            <li><a href="#houses">House</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#login"><span ng-bind="email" class="glyphicon glyphicon-user"></span></a></li>
+                    <li><a href="#postManage"><span class="glyphicon glyphicon-shopping-cart"></span> Post Management</a></li>
+                    <li><a href="#mailBox"><span class="glyphicon glyphicon-user"></span> MailBox</a></li>
+                    <li ng-show="1" ng-click="logout()"><a href="#"><span class="glyphicon glyphicon-log-out"></span>logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div ng-view="" id="ng-view"></div>
+    </div>
+
+    <footer class="container-fluid text-center">
+        <a class="up-arrow" href="#home" data-toggle="tooltip" title="TO TOP">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a>
+        <p>welcome to this RentMyStuff!</a>
+        </p>
+    </footer>
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/ng-file-upload-shim.min.js"></script>
+    <script src="js/ng-file-upload.min.js"></script>
+    <script src="app/app.js"></script>
+</body>
+
+</html>

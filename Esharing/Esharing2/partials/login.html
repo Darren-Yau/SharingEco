@@ -1,0 +1,26 @@
+<div id="login" class="tab-pane fade in active">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<p></p>
+					</div>
+					<div class="panel-body">
+						<form>
+							<div class="form-group">
+								<label for="email">Email:</label> <input type="email"
+									name="email" class="form-control" id="email" ng-model="email"
+									placeholder="Enter email">
+							</div>
+							<div class="form-group">
+								<label for="pwd">Password:</label> <input type="password"
+									name="password" class="form-control" id="pwd" ng-model="password"
+									placeholder="Enter password">
+							</div>
+							<div class="checkbox">
+								<label><input type="checkbox"> Remember me  {{message}}</label>
+							</div>
+							<button ng-click="login()" class="btn btn-primary">Submit</button>
+              <a href="#signup" class="btn btn-primary">SignUp</a>
+						</form>
+					</div>
+				</div>
+			</div>

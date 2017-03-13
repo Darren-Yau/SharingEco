@@ -1,0 +1,121 @@
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <label>Title</label>
+      <input class="form-control" type="text" ng-model="Post.Title">
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <label>Address</label>
+      <input class="form-control" type="text" ng-model="Post.Address">
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <label>Sqft</label>
+      <input class="form-control" type="number" ng-model="House.Sqft">
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <label>Rooms</label>
+      <input class="form-control" type="number" ng-model="House.Rooms">
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <label>Rent</label>
+      <input class="form-control" type="number" ng-model="House.Rent">
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <label>Baths</label>
+      <input class="form-control" type="number" ng-model="House.Baths">
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <label>Available Date</label>
+      <input class="form-control" type="date" ng-model="Post.AvailStart">
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <label>End Date</label>
+      <input class="form-control" type="date" ng-model="Post.AvailEnd">
+    </div>
+  </div>
+</div>
+
+<br>
+<label>Description</label>
+<textarea class="form-control" rows="8" ng-model="Post.Description"></textarea>
+
+<br>
+<script>
+$(document).ready( function() {
+    $(document).on('change', '.btn-file :file', function() {
+  var input = $(this),
+    label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
+  input.trigger('fileselect', [label]);
+  });
+  $('.btn-file :file').on('fileselect', function(event, label) {
+      var input = $(this).parents('.input-group').find(':text'),
+          log = label;
+      if( input.length ) {
+          input.val(log);
+      } else {
+          if( log ) alert(log);
+      }
+  });
+  function readURL(input) {
+      if (input.files && input.files[0]) {
+          var reader = new FileReader();
+          reader.onload = function (e) {
+              $('#img-upload').attr('src', e.target.result);
+          }
+          reader.readAsDataURL(input.files[0]);
+      }
+  }
+  $("#imgInp").change(function(){
+      readURL(this);
+  });
+});
+</script>
+<br>
+<div class="form-group" align="center">
+        <label>Upload Image</label>
+        <div class="input-group" style="width:70%">
+            <span class="input-group-btn">
+                <span class="btn btn-primary btn-file">
+                    Browse… <input type="file" ngf-select="onFileSelect($file)" id="imgInp">
+                </span>
+            </span>
+            <input type="text" class="form-control" readonly>
+            <span class="input-group-btn">
+        <button class="btn btn-success" ng-click="imgUpload()" type="button">{{buttonText}}</button>
+      </span>
+        </div>
+        <br>
+        <img id='img-upload' src="{{Post.imgsrc}}"/>
+</div>
+
+<hr>
+<div class= "form-group">
+    <label class= "col-md-2"></label>
+    <div class="col-md-4">
+    <a href="#postManage" class="btn btn-lg">Cancel</a>
+    <button ng-click="saveHouse();" ng-disabled="isChange()" class="btn btn-success">{{buttonText}}</button>
+    </div>
+</div>

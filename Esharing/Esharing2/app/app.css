@@ -1,0 +1,10 @@
+.center-absolute {
+  position: absolute;
+  top: 40%;
+  left:35%;
+}
+.center-relative {
+  position: relative;
+  top: 40%;
+  left:35%;
+}
