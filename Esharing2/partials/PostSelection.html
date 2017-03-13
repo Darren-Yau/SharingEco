@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-md-2" style="text-align: right;">
-        <a href="#/editHouse/0" class="btn btn-sq-lg btn-success">
+        <a href="#/editHousePost/0/0" class="btn btn-sq-lg btn-success">
             <br/><i class="glyphicon glyphicon-home" style="font-size: 50px;"></i><br/> Post your house
         </a>
     </div>
@@ -35,7 +35,7 @@
                                 <td>{{data.Rooms}}</td>
                                 <td>{{data.Baths}}</td>
                                 <td>
-                                    <a class="btn btn-primary btn-sm open-Edit" href="#/editHouse/{{data.ID}}">
+                                    <a class="btn btn-primary btn-sm open-Edit" href="#/editHousePost/{{data.ID}}/{{data.HouseID}}">
                                         <span class="glyphicon glyphicon-pencil"></span> Edit
                                     </a>
                                 </td>
@@ -55,7 +55,7 @@
 </div>
 <div class="row">
     <div class="col-md-2" style="text-align: right;">
-        <a href="#/editPost/0/0" class="btn btn-sq-lg btn-info">
+        <a href="#/editCarPost/0/0" class="btn btn-sq-lg btn-info">
             <br/><i class="glyphicon glyphicon-road" style="font-size: 50px;"></i><br/> Post your car
         </a>
     </div>
@@ -92,7 +92,7 @@
                                 <td>{{data.Color}}</td>
                                 <td>{{data.Price}}</td>
                                 <td>
-                                    <a class="btn btn-primary btn-sm open-Edit" href="#/editPost/{{data.ID}}/{{data.CarID}}">
+                                    <a class="btn btn-primary btn-sm open-Edit" href="#/editCarPost/{{data.ID}}/{{data.CarID}}">
                                         <span class="glyphicon glyphicon-pencil"></span> Edit
                                     </a>
                                 </td>
